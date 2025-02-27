@@ -1,18 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.ejercicio1.proyectofinaled;
 
-/**
- *
- * @author camil
- */
 public class Cola {
 
     private Nodo frente;
     private Nodo fin;
 
+    public Cola(Nodo frente, Nodo fin) {
+        this.frente = frente;
+        this.fin = fin;
+    }
+    
     public Cola() {
         this.frente = null;
         this.fin = null;

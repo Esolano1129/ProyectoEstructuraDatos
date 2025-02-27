@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.ejercicio1.proyectofinaled;
 
 import java.time.LocalDateTime;
 
-/**
- *
- * @author camil
- */
 public class Tiquete {
     
     private String nombre;
@@ -20,6 +13,10 @@ public class Tiquete {
     private LocalDateTime horaAtencion;
     private String tramite;
     private String tipoTramite;
+
+    public Tiquete() {
+        
+    }
 
     public Tiquete(String nombre, String id, int edad, String monedaCuenta, LocalDateTime horaCreacion, LocalDateTime horaAtencion, String tramite, String tipoTramite) {
         this.nombre = nombre;
