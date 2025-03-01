@@ -1,7 +1,5 @@
 package com.ejercicio1.proyectofinaled;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Cola {
 
