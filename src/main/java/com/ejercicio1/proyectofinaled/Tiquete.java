@@ -102,6 +102,11 @@ public class Tiquete {
     public void setTipoTramite(String tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
+
+    @Override
+    public String toString() {
+        return "Tiquete{" + "nombre=" + nombre + ", id=" + id + ", edad=" + edad + ", monedaCuenta=" + monedaCuenta + ", horaCreacion=" + horaCreacion + ", horaAtencion=" + horaAtencion + ", tramite=" + tramite + ", tipoTramite=" + tipoTramite + '}';
+    }
     
     
     

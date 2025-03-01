@@ -1,4 +1,3 @@
-
 package com.ejercicio1.proyectofinaled;
 
 import java.util.ArrayList;
@@ -31,7 +30,7 @@ public class Cola {
         }
     }
 
-    public Tiquete descolar() throws Exception {
+    public Tiquete desencolar() throws Exception {
         if (frente == null) {
             throw new Exception("La cola está vacía");
 
@@ -60,4 +59,3 @@ public class Cola {
     }
 
 }
-

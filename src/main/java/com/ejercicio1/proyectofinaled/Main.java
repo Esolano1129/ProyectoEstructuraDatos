@@ -23,18 +23,17 @@ public class Main {
         newCola.encolar(new Tiquete("Hernan Gonzales","16565723312",75,"Dolares","Retiros","P"));
         newCola.encolar(new Tiquete("Mario Brenes","3452321223246",36,"Colones","Cambio de Divisas","A"));
         
-  
+       System.out.println("Elemento al frente: " + newCola.frente());
+       System.out.println("Elemento eliminado: " + newCola.desencolar()); 
+       System.out.println("Elemento al frente: " + newCola.frente());
         
-        Serializacion serializaCola = new Serializacion();
-       serializaCola.serializarCola(newCola, "Config.json");
+        //Serializacion serializaCola = new Serializacion();
+        //serializaCola.serializarCola(newCola, "Config.json");
         
       
         //Menu menu = new Menu();
         //menu.desplegarMenu();
         
-        while (!newCola.estaVacia()) { 
-            
-        }
         
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -44,4 +43,3 @@ public class Main {
        } 
     }
         
-

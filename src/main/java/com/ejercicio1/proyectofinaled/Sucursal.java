@@ -39,13 +39,13 @@ public class Sucursal {
     }
     public void atenderTiquete() throws Exception {
         if (!colaPreferencial.estaVacia()){
-            Tiquete tiquete = colaPreferencial.descolar();
+            Tiquete tiquete = colaPreferencial.desencolar();
             System.out.println("Atendiendo tiquete preferencial: " + tiquete.getNombre());
         } else if (!colaTramiteRapido.estaVacia()){
-            Tiquete tiquete = colaTramiteRapido.descolar();
+            Tiquete tiquete = colaTramiteRapido.desencolar();
             System.out.println("Atendiendo tiquete de tramite rapido: " + tiquete.getNombre());
         }else if (!colaTramiteNormal.estaVacia()){
-            Tiquete tiquete = colaTramiteNormal.descolar();
+            Tiquete tiquete = colaTramiteNormal.desencolar();
             System.out.println("Atendiendo tiquete normal: " + tiquete.getNombre());
         }else {
             System.out.println("No hay tiquetes para atender.");
