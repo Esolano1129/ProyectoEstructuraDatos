@@ -14,7 +14,7 @@ public class Nodo {
 
     public Nodo(Tiquete dato) {
         this.dato = dato;
-        this.siguiente = null;
+        
     }
 
     public Tiquete getDato() {

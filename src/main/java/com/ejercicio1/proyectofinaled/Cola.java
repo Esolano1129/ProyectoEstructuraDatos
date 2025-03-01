@@ -1,6 +1,9 @@
 
 package com.ejercicio1.proyectofinaled;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Cola {
 
     private Nodo frente;
@@ -12,8 +15,8 @@ public class Cola {
     }
     
     public Cola() {
-        this.frente = null;
-        this.fin = null;
+        this.frente = frente;
+        this.fin = fin;
     }
 
     public void encolar(Tiquete dato) {
@@ -55,4 +58,6 @@ public class Cola {
         return frente == null;
 
     }
+
 }
+
