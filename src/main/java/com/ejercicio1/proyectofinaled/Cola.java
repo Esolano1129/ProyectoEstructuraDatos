@@ -1,6 +1,5 @@
 package com.ejercicio1.proyectofinaled;
 
-
 public class Cola {
 
     private Nodo frente;
@@ -54,6 +53,7 @@ public class Cola {
     public boolean estaVacia() {
         return frente == null;
 
-    }
+}
+
 
 }

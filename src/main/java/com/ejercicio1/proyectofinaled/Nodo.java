@@ -2,7 +2,7 @@
 package com.ejercicio1.proyectofinaled;
 
 public class Nodo {
-    //Atributos
+   
     
     private Tiquete dato; 
     private Nodo siguiente;
