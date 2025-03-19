@@ -13,11 +13,11 @@ public class Serializacion {
     public Serializacion() {
         
     }
-        public void serializarCola(Cola cola, String archivo){
+        public void serializarLista(Lista lista, String archivo){
         Gson gson = new GsonBuilder().create();
         try (FileWriter writer = new FileWriter(archivo)) {
             
-            gson.toJson(cola,writer);
+            gson.toJson(lista,writer);
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -25,10 +25,10 @@ public class Serializacion {
         
     }
     
-    public Cola desseralizarCola(String archivo){
+    public Lista desseralizarLista(String archivo){
         Gson gson = new GsonBuilder().create();
         try (FileReader reader = new FileReader(archivo)) {            
-            return gson.fromJson(reader, Cola.class);            
+            return gson.fromJson(reader, Lista.class);            
         } catch (Exception e) {
             e.printStackTrace();
         }

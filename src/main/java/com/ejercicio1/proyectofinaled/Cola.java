@@ -1,5 +1,6 @@
 package com.ejercicio1.proyectofinaled;
 
+
 public class Cola {
 
     private Nodo frente;
@@ -54,6 +55,13 @@ public class Cola {
         return frente == null;
 
 }
+    public void MoverTiquetesaLista(Lista caja){
+         Nodo auxiliar = frente;
 
+        while (auxiliar != null) {
+            caja.insertar(auxiliar.getDato());  
+            auxiliar = auxiliar.getSiguiente();
+        }
+    }
 
 }
