@@ -1,7 +1,9 @@
 
 package com.ejercicio1.proyectofinaled;
 
-public class Nodo {
+
+
+public class Nodo{
    
     
     private Tiquete dato; 

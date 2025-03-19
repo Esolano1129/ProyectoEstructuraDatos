@@ -1,9 +1,10 @@
 
 package com.ejercicio1.proyectofinaled;
 
+
 import java.time.LocalDateTime;
 
-public class Tiquete {
+public class Tiquete  {
     
     private String nombre;
     private String id;

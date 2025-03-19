@@ -1,6 +1,8 @@
 package com.ejercicio1.proyectofinaled;
 
 
+
+
 public class Cola {
 
     private Nodo frente;
