@@ -132,6 +132,10 @@ public class Lista {
         return respuesta;
     }
     
+
+    public boolean estaVacia() {
+        return cabeza == null;
+    }
 }
     
     

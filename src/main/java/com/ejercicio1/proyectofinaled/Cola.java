@@ -1,8 +1,5 @@
 package com.ejercicio1.proyectofinaled;
 
-
-
-
 public class Cola {
 
     private Nodo frente;
@@ -12,7 +9,7 @@ public class Cola {
         this.frente = frente;
         this.fin = fin;
     }
-    
+
     public Cola() {
         this.frente = frente;
         this.fin = fin;
@@ -56,14 +53,33 @@ public class Cola {
     public boolean estaVacia() {
         return frente == null;
 
-}
-    public void MoverTiquetesaLista(Lista caja){
-         Nodo auxiliar = frente;
-
-        while (auxiliar != null) {
-            caja.insertar(auxiliar.getDato());  
-            auxiliar = auxiliar.getSiguiente();
-        }
     }
+
+    
+    public void MoverTiquetesaLista(Lista CajaPreferencial, Lista CajaTramiteRapido, Lista CajaTramiteNormal) {
+    Nodo auxiliar = frente;
+
+    while (auxiliar != null) {
+        Tiquete tiquete = auxiliar.getDato();  
+        
+        
+        switch (tiquete.getTipoTramite()) {
+            case "P":  // Preferencial
+                CajaPreferencial.insertar(tiquete);
+                break;
+            case "A":  // Trámite rápido
+                CajaTramiteRapido.insertar(tiquete);
+                break;
+            case "B":  // Trámite normal
+                CajaTramiteNormal.insertar(tiquete);
+                break;
+            default:
+                System.out.println("Tipo de trámite no válido: " + tiquete.getTipoTramite());
+        }
+        
+        auxiliar = auxiliar.getSiguiente();  
+    }
+}
+
 
 }
