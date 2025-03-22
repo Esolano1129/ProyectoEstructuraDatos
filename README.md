@@ -42,7 +42,8 @@ discapacidades, embarazo, empresariales, adultos mayores. De igual forma, entre 
 <b>Módulo 1.1: Creación de tiquetes</b>
 
 1. Utilizará como medio de almacenamiento las Colas de Prioridades según el tipo y el tamaño de la Cola.
-<b>PENDIENTE</b>
+
+<b> AVANCE:Listas de colas de prioridades implementadas, las colas pasan los tikets a las listas de prioridades.
 
 2. El nodo de la cola debe contemplar como mínimo la siguiente información para cada tiquete: Nombre,Id,Edad,Moneda Cuenta (dólares ó colones), Hora de creación (la obtiene del sistema), Hora de atención (por defecto es -1 hasta que sea atendido), Tramite (Depósitos, Retiros, Cambio de Divisas, Servicios), Tipo Tramite (P: preferencial, A: un solo tramite, B: dos o más tramites)
 
