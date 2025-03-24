@@ -12,26 +12,16 @@ public class Menu {
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
         String id = JOptionPane.showInputDialog("Ingrese el id del cliente: ");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del cliente: "));
-        String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta (dólares o colones): ");
-        String tramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite(Depositos, Retiros, Cambio de divisas, Servicios): ");
-        String tipoTramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite(P: Preferencial, A: Un solo tramite, B: Dos o más tramites): ");
+        String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta:"+"\n"+"Dólares"+"\n"+"Colones");
+        String tramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite:" +"\n"+"*Depositos"+"\n"+" *Retiros"+"\n"+"*Cambio de divisas"+"\n"+"*Servicios");
+        String tipoTramite = JOptionPane.showInputDialog("Ingrese el tipo de Prioridad:"+"\n"+"P: Preferencial"+"\n"+"A: Un solo tramite"+"\n"+"B: Dos o más tramites");
 
         Tiquete tiquete = new Tiquete(nombre, id, edad, monedaCuenta, tramite, tipoTramite);
 
         this.colaTiquetes.encolar(tiquete);
-        //int largo = colaTiquetes.imprimirCola();
+        int largo = colaTiquetes.imprimirCola();
         //System.out.println("Hay "+ largo + " tiquetes en la cola");
-        /*int respuesta = JOptionPane.showConfirmDialog(null, "¿Desea atender un tiquete?: ", "Atender tiquete", JOptionPane.YES_NO_OPTION);
-        if (respuesta == JOptionPane.YES_OPTION) {
-
-
-            try {
-
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, e.getMessage());
-            }
-        }*/
-        
+         
     }
     public void desplegarMenuInicial(){
         

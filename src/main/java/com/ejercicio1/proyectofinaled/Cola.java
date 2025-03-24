@@ -87,7 +87,7 @@ public class Cola {
         int i = 0;
         while(frenteTemp != null){
             
-            System.out.println("Nodo "+ i + " con nombre en el tiquete: "+ frenteTemp.getDato().nombre);            
+            System.out.println( "\n"+"Nuevo Tiquete Agregado: "+ frenteTemp.getDato());            
             i++;
             frenteTemp = frenteTemp.getSiguiente();
         }

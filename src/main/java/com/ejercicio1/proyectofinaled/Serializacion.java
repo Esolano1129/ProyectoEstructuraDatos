@@ -40,7 +40,7 @@ public class Serializacion {
                
                 Tiquete tkt = cabezaTemp.getDato();
                 String datos = gson.toJson(tkt.toString());
-                System.out.println("GSON \n "+datos);
+                System.out.println("JSON \n "+datos);
                 //String nombreTkt = tkt.getNombre();
                 json = json + " " + datos;
                 cabezaTemp = cabezaTemp.getSiguiente();

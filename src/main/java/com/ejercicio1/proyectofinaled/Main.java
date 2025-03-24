@@ -10,10 +10,10 @@ public class Main {
              Login log = new Login();
              log.validarUsuario();
              
-             Sucursal sucursal = new Sucursal();
-             sucursal.crearCajas();
-             //Menu menu = new Menu();
-             //menu.desplegarMenuInicial();     
+            Sucursal sucursal = new Sucursal();
+            sucursal.crearCajas();
+            // Menu menu = new Menu();
+            // menu.desplegarMenuInicial();     
             
         } catch (Exception e) {
             System.out.println(e.getMessage());

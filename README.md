@@ -4,12 +4,12 @@ Integrantes:<br>
 
 Link Video Youtube: https://youtu.be/VmvvYFwYd3E <br>
 
-- Abby Camila Chavarría Bolaños
-- Camila Da Silva Fallas
-- Edgardo Antonio Solano Solera
-- Robert Steven Monge Garro</b>
+Link Video Youtube #2:https://youtu.be/MPjrF9W8Bow?si=hPGBWRiUODeNDZaa <br>
 
-<b>Entrega #1 - Requisitos logrados</b>:
+- Abby Camila Chavarría Bolaños
+- Edgardo Antonio Solano Solera</b>
+
+<b>Entrega #2 - Requisitos logrados</b>:
 
 <b>Módulo 1.0: Configuración</b>
   
@@ -30,36 +30,36 @@ discapacidades, embarazo, empresariales, adultos mayores. De igual forma, entre 
 <b>PENDIENTE.</b>
 
 5. El número total de cajas puede cambiar por cada ejecución no debe ser configurado de forma fija dentro del código. Debe poder ser dinámico sin afectar la funcionalidad del programa (lista de colas).
-<b>AVANCE: Creamos la clase Sucursal la cuál usaremos para manejar la cantidad de Cajas</b>
+<b>AVANCE:</b> Creamos la clase Sucursal la cuál usaremos para manejar la cantidad de Cajas
 
 6. Lo anterior debe verse reflejado (serializado) en el archivo config.json (.txt).
 
-<b>AVANCE: Esto lo estamos manejando junto al archivo Config.json, intentamos serializar la cola completa.</b>
+<b>AVANCE:</b> Esto lo estamos manejando junto al archivo Config.json, intentamos serializar la cola completa.
    
 7. Los usuarios y contraseñas de los usuarios serán almacenados en este archivo. No deben quedar quemados en el código (al menos un usuario por miembro del grupo).
-<b>AVANCE: Creamos el archivo JSON de usuarios.json y además creamos la clase Usuario con sus atributos y creamos el login</b>
+<b>AVANCE:</b> Creamos el archivo JSON de usuarios.json y además creamos la clase Usuario con sus atributos y creamos el login
 
 
 <b>Módulo 1.1: Creación de tiquetes</b>
 
 1. Utilizará como medio de almacenamiento las Colas de Prioridades según el tipo y el tamaño de la Cola.
 
-<b> AVANCE:Listas de colas de prioridades implementadas.
+<b> AVANCE:</b> Listas de colas de prioridades implementadas.
 
 2. El nodo de la cola debe contemplar como mínimo la siguiente información para cada tiquete: Nombre,Id,Edad,Moneda Cuenta (dólares ó colones), Hora de creación (la obtiene del sistema), Hora de atención (por defecto es -1 hasta que sea atendido), Tramite (Depósitos, Retiros, Cambio de Divisas, Servicios), Tipo Tramite (P: preferencial, A: un solo tramite, B: dos o más tramites)
 
-<b>AVANCE: Completado, creamos la clase tiquete con todos los atributos y métodos necesarios, posterior creamos la clase Nodo que contiene los tiquetes con todos los atributos y la clase Cola que contiene los Nodos.</b>
+<b>AVANCE:</b> Completado, creamos la clase tiquete con todos los atributos y métodos necesarios, posterior creamos la clase Nodo que contiene los tiquetes con todos los atributos y la clase Cola que contiene los Nodos.
 
 3. Deberá contemplar cualquier otro atributo dentro del Nodo para que este funcione como una cola.
 
-<b>AVANCE: Completado.</b>
+<b>AVANCE:</b> Completado
 
 4. Una vez el tiquete es creado con la información del cliente, este imprime la caja en la que debe ser atendido, así mismo, la cantidad de personas que están por delante de él. En caso de no tener a nadie adelante y la caja no está atendiendo a ningún cliente (ocupada) el programa debe indicarle que ya es su turno de atención.
 <b>PENDIENTE</b>
 
 5. Lo anterior debe verse reflejado (serializado) en el archivo tiquetes.json (.txt). Y cargarse cuando inicia el sistema si existen registros pendientes de atender.
    
-<b>AVANCE: Esto lo estamos manejando junto al archivo Config.json, intentamos serializar la cola completa con todos los tiquetes.</b>
+<b>AVANCE:</b> Esto lo estamos manejando junto al archivo Config.json, intentamos serializar la cola completa con todos los tiquetes.
 
 
 
@@ -79,7 +79,7 @@ desocupado (no se encuentra atendiendo un tiquete).
 3. Cada vez que un tiquete pasa a ser atendido debe cambiar la hora de atención por la del sistema y además debe mandarlo a guardar en la base de datos, en este caso
 un archivo llamado atendidos.json (.txt)
 
-<b>PENDIENTEE:</b>
+<b>PENDIENTE:</b>
 
 4. Se debe guardar en base de datos en cual caja y de cual sucursal fue atendido.
 
@@ -87,7 +87,7 @@ un archivo llamado atendidos.json (.txt)
 
 5. El sistema debe poder mostrar por pantalla esta información con una opción de menú.
 
-<b>AVANCE: Creamos la clase Menú la cuál se mostrará las opciones al usuario.</b>
+<b>AVANCE:</b> Creamos la clase Menú la cuál se mostrará las opciones al usuario.
 
 6. Los tipos de tiquetes deben ser al menos.
 
