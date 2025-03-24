@@ -6,14 +6,14 @@ import java.time.LocalDateTime;
 
 public class Tiquete  {
     
-    private String nombre;
-    private String id;
-    private int edad;
-    private String monedaCuenta;
-    private LocalDateTime horaCreacion;
-    private LocalDateTime horaAtencion;
-    private String tramite;
-    private String tipoTramite;
+    public String nombre;
+    public String id;
+    public int edad;
+    public String monedaCuenta;
+    public LocalDateTime horaCreacion;
+    public LocalDateTime horaAtencion;
+    public String tramite;
+    public String tipoTramite;
 
     public Tiquete() {
         
@@ -106,7 +106,7 @@ public class Tiquete  {
 
     @Override
     public String toString() {
-        return "Tiquete{" + "nombre=" + nombre + ", id=" + id + ", edad=" + edad + ", monedaCuenta=" + monedaCuenta + ", horaCreacion=" + horaCreacion + ", horaAtencion=" + horaAtencion + ", tramite=" + tramite + ", tipoTramite=" + tipoTramite + '}';
+        return "Tiquete[" + "nombre:" + nombre + ", id:" + id + ", edad:" + edad + ", monedaCuenta:" + monedaCuenta + ", horaCreacion:" + horaCreacion + ", horaAtencion:" + horaAtencion + ", tramite:" + tramite + ", tipoTramite:" + tipoTramite + ']';
     }
     
     

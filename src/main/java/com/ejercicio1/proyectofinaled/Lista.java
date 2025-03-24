@@ -5,7 +5,9 @@ package com.ejercicio1.proyectofinaled;
 
 public class Lista {
     
-     private Nodo cabeza;
+    public Nodo cabeza;
+    //public NodoColas cabeza;
+    
     
     public void insertar(Tiquete t)
     {
@@ -49,6 +51,24 @@ public class Lista {
         }
     }
     
+    public void insertarNodo(Nodo dato){ //insertar cajeros
+        Nodo nuevoNodo = new Nodo(dato);
+        if (cabeza == null) {
+            cabeza = nuevoNodo;
+        }else{
+            while(cabeza != null){
+                if (cabeza.getSiguiente() == null){
+                    cabeza.setSiguiente(dato);
+                    System.out.println("INSERTADO");
+                }
+                cabeza = cabeza.getSiguiente();
+            }
+            
+        }
+        
+       
+        
+    }
     public boolean existe(String id)
     {
         boolean respuesta = false;
@@ -130,6 +150,19 @@ public class Lista {
         }
         
         return respuesta;
+    }
+    
+    public int imprimirLista(){
+        
+        Nodo frenteTemp = this.cabeza;
+        int i = 0;
+        while(frenteTemp != null){
+            
+            System.out.println("Nodo "+ i + " con nombre en el tiquete: "+ frenteTemp.getDato().nombre);            
+            i++;
+            frenteTemp = frenteTemp.getSiguiente();
+        }
+        return i;
     }
     
 

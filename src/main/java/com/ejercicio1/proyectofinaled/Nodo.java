@@ -10,6 +10,7 @@ public class Nodo{
     private Nodo siguiente;
 
     public Nodo() {
+        this.dato = null;
         this.siguiente = null;
         
     }
@@ -17,6 +18,10 @@ public class Nodo{
     public Nodo(Tiquete dato) {
         this.dato = dato;
         
+    }
+
+    Nodo(Nodo dato) {
+        this.siguiente = dato;
     }
 
     public Tiquete getDato() {

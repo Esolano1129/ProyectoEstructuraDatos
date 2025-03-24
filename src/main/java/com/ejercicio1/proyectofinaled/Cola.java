@@ -57,29 +57,40 @@ public class Cola {
 
     
     public void MoverTiquetesaLista(Lista CajaPreferencial, Lista CajaTramiteRapido, Lista CajaTramiteNormal) {
-    Nodo auxiliar = frente;
+        Nodo auxiliar = frente;
 
-    while (auxiliar != null) {
-        Tiquete tiquete = auxiliar.getDato();  
-        
-        
-        switch (tiquete.getTipoTramite()) {
-            case "P":  // Preferencial
-                CajaPreferencial.insertar(tiquete);
-                break;
-            case "A":  // Trámite rápido
-                CajaTramiteRapido.insertar(tiquete);
-                break;
-            case "B":  // Trámite normal
-                CajaTramiteNormal.insertar(tiquete);
-                break;
-            default:
-                System.out.println("Tipo de trámite no válido: " + tiquete.getTipoTramite());
+        while (auxiliar != null) {
+            Tiquete tiquete = auxiliar.getDato();  
+
+
+            switch (tiquete.getTipoTramite()) {
+                case "P":  // Preferencial
+                    CajaPreferencial.insertar(tiquete);
+                    break;
+                case "A":  // Trámite rápido
+                    CajaTramiteRapido.insertar(tiquete);
+                    break;
+                case "B":  // Trámite normal
+                    CajaTramiteNormal.insertar(tiquete);
+                    break;
+                default:
+                    System.out.println("Tipo de trámite no válido: " + tiquete.getTipoTramite());
+            }
+
+            auxiliar = auxiliar.getSiguiente();  
         }
-        
-        auxiliar = auxiliar.getSiguiente();  
     }
-}
-
-
+    
+    public int imprimirCola(){
+        
+        Nodo frenteTemp = this.frente;
+        int i = 0;
+        while(frenteTemp != null){
+            
+            System.out.println("Nodo "+ i + " con nombre en el tiquete: "+ frenteTemp.getDato().nombre);            
+            i++;
+            frenteTemp = frenteTemp.getSiguiente();
+        }
+        return i;
+    }
 }

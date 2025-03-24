@@ -1,48 +1,41 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package com.ejercicio1.proyectofinaled;
 
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author edgar
+ */
 public class Sucursal {
+    String nombre;
+    Lista cajeros = new Lista();
+    int cantidad; //lista con multiples cajas
     
-    private String nombreSucursal;
-    private int cantidadCajas;
-    private Lista CajaPreferencial;
-    private Lista CajaTramiteRapido;
-    private Lista CajaTramiteNormal;
-
-
-    public Sucursal(String nombreSucursal, int cantidadCajas, Lista CajaPreferencial, Lista CajaTramiteRapido, Lista CajaTramiteNormal) {
-        this.nombreSucursal = nombreSucursal;
-        this.cantidadCajas = cantidadCajas;
-        this.CajaPreferencial = CajaPreferencial;
-        this.CajaTramiteRapido = CajaTramiteRapido;
-        this.CajaTramiteNormal = CajaTramiteNormal;
     
-    }
-
-    public Sucursal(String nombreSucursal, int cantidadCajas) {
-        this.nombreSucursal = nombreSucursal;
-        this.cantidadCajas = cantidadCajas;
-    }
-
-    public String getNombreSucursal() {
-        return nombreSucursal;
-    }
-
-    public void setNombreSucursal(String nombreSucursal) {
-        this.nombreSucursal = nombreSucursal;
-    }
-
-    public int getCantidadCajas() {
-        return cantidadCajas;
-    }
-
-    public void setCantidadCajas(int cantidadCajas) {
-        this.cantidadCajas = cantidadCajas;
-    }
-
-    @Override
-    public String toString() {
-        return "Sucursal{" + "nombreSucursal=" + nombreSucursal + ", cantidadCajas=" + cantidadCajas + ", CajaPreferencial=" + CajaPreferencial + ", CajaTramiteRapido=" + CajaTramiteRapido + ", CajaTramiteNormal=" + CajaTramiteNormal + '}';
+    Sucursal(){
+        this.nombre = JOptionPane.showInputDialog(null, "Digite el nombre de la sucursal");
+        this.cantidad = Integer.parseInt(JOptionPane.showInputDialog("Digite la cantidad de Cajas en la sucursal"));
     }
     
+    Sucursal(String nombre, int cantidad){
+        this.nombre = nombre;
+        this.cantidad = cantidad;
+        crearCajas();
+    }
+    
+    
+    public void crearCajas(){
+        
+        for(int i = 0; i < this.cantidad; i++){
+            cajeros.insertarNodo(new Nodo()); //insertar caja
+            //System.out.println("Caja " + (i+1) + " creada");
+        }
+        
+        cajeros.imprimirLista();
+        
+    }
 }
