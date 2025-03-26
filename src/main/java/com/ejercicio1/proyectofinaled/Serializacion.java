@@ -27,11 +27,11 @@ public class Serializacion {
             newCola.encolar(new Tiquete("Mario Brenes", "159384762945", 36, "Colones", "Cambio de Divisas", "A"));
             
             newCola.MoverTiquetesaLista(newLista, newLista, newLista);
-            serializarLista(newLista, "Config.json");
+            //serializarLista(newLista, "Config.json");
             generarUsuarios();
             
     }
-        public void serializarLista(Lista lista, String archivo){
+       /* public void serializarLista(Lista lista, String archivo){
         Gson gson = new GsonBuilder().create();
         try (FileWriter writer = new FileWriter(archivo)) {
             String json = "";
@@ -51,8 +51,15 @@ public class Serializacion {
             e.printStackTrace();
         }
         
+    }*/
+          public void serializarPila(Lista lista, String archivo){
+        Gson gson = new GsonBuilder().create();
+        try (FileWriter writer = new FileWriter(archivo)) {
+            gson.toJson(lista,writer);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
-        
         
         public void generarUsuarios(){
             

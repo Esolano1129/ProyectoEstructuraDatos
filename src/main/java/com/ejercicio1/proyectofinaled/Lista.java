@@ -7,7 +7,11 @@ public class Lista {
     
     public Nodo cabeza;
     //public NodoColas cabeza;
-    
+
+    public Lista() {
+        this.cabeza=null;
+    }
+
     
     public void insertar(Tiquete t)
     {
