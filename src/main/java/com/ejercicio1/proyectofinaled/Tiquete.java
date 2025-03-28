@@ -10,8 +10,8 @@ public class Tiquete  {
     public String id;
     public int edad;
     public String monedaCuenta;
-    public LocalDateTime horaCreacion;
-    public LocalDateTime horaAtencion;
+    public String horaCreacion;
+    public String horaAtencion;
     public String tramite;
     public String tipoTramite;
 
@@ -19,12 +19,12 @@ public class Tiquete  {
         
     }
 
-    public Tiquete(String nombre, String id, int edad, String monedaCuenta, LocalDateTime horaCreacion, LocalDateTime horaAtencion, String tramite, String tipoTramite) {
+    public Tiquete(String nombre, String id, int edad, String monedaCuenta, String horaCreacion, String horaAtencion, String tramite, String tipoTramite) {
         this.nombre = nombre;
         this.id = id;
         this.edad = edad;
         this.monedaCuenta = monedaCuenta;
-        this.horaCreacion = LocalDateTime.now();
+        this.horaCreacion = "";
         this.horaAtencion = null;
         this.tramite = tramite;
         this.tipoTramite = tipoTramite;
@@ -71,23 +71,6 @@ public class Tiquete  {
     public void setMonedaCuenta(String monedaCuenta) {
         this.monedaCuenta = monedaCuenta;
     }
-
-    public LocalDateTime getHoraCreacion() {
-        return horaCreacion;
-    }
-
-    public void setHoraCreacion(LocalDateTime horaCreacion) {
-        this.horaCreacion = horaCreacion;
-    }
-
-    public LocalDateTime getHoraAtencion() {
-        return horaAtencion;
-    }
-
-    public void setHoraAtencion(LocalDateTime horaAtencion) {
-        this.horaAtencion = horaAtencion;
-    }
-
     public String getTramite() {
         return tramite;
     }
@@ -103,6 +86,23 @@ public class Tiquete  {
     public void setTipoTramite(String tipoTramite) {
         this.tipoTramite = tipoTramite;
     }
+
+    public String getHoraCreacion() {
+        return horaCreacion;
+    }
+
+    public void setHoraCreacion(String horaCreacion) {
+        this.horaCreacion = horaCreacion;
+    }
+
+    public String getHoraAtencion() {
+        return horaAtencion;
+    }
+
+    public void setHoraAtencion(String horaAtencion) {
+        this.horaAtencion = horaAtencion;
+    }
+    
 
     @Override
     public String toString() {

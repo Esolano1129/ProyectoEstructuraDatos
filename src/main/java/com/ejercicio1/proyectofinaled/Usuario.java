@@ -2,16 +2,35 @@ package com.ejercicio1.proyectofinaled;
 
 public class Usuario {
 
-    public String nombre;
-    public String contrasena;
+    private String Usuario;
+    private String contrasena;
 
     public void Usuario() {
-        nombre = "";
+        Usuario = "";
         contrasena = "";
     }
 
-    public Usuario(String nombre, String contrasena) {
-        this.nombre = nombre;
+    public Usuario() {
+    }
+
+    public Usuario(String Usuario, String contrasena) {
+        this.Usuario = Usuario;
+        this.contrasena = contrasena;
+    }
+
+    public String getUsuario() {
+        return Usuario;
+    }
+
+    public void setUsuario(String Usuario) {
+        this.Usuario = Usuario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
 

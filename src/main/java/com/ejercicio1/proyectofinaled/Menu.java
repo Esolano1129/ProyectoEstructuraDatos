@@ -23,7 +23,7 @@ public class Menu {
         //System.out.println("Hay "+ largo + " tiquetes en la cola");
          
     }
-    public void desplegarMenuInicial(){
+    public void desplegarMenuInicial()throws Exception{
         
          int opcion;
 
@@ -32,7 +32,8 @@ public class Menu {
             String menu = "Bienvenido a nuestro menú:\n"
                         + "1. Agregar Tiquete\n"
                         + "2. Atender Tiquete\n"
-                        + "3. Salir";
+                        + "3. Mostrar tipo de Cambio\n"
+                        + "4. Salir";
 
             opcion = Integer.parseInt(JOptionPane.showInputDialog(menu));
 
@@ -48,8 +49,14 @@ public class Menu {
                     JOptionPane.showMessageDialog(null, "Sistema de Atender Tiquete");
 
                     break;
+                    
+                 case 3:
+                    JOptionPane.showMessageDialog(null, "Tipo de Cambio");
+                    TipoCambio cambio = new TipoCambio();
+                    cambio.mostrarTipoCambio();
+                    break;
 
-                case 3:
+                case 4:
                     JOptionPane.showMessageDialog(null, "Salir");
 
                     break;
@@ -57,7 +64,7 @@ public class Menu {
                 default:
                     JOptionPane.showMessageDialog(null, "Opción no válida. Intente nuevamente.");
             }
-        } while (opcion != 3);  
+        } while (opcion != 4);  
     }
 }
         
