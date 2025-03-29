@@ -7,9 +7,30 @@ public class Menu {
     
     Cola colaTiquetes = new Cola();
     
+     Sucursal sucursal = new Sucursal();
+     
+    public Menu(){
+        sucursal.crearCajas();
+    }
+    
     public void MenuCargarTiket(){
   
-        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
+        
+        
+        int valido = -1;
+        while(valido == -1){
+            int cajaAtender = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de caja que va a atender el tiquete"));
+            valido = sucursal.asignarTiquete(cajaAtender);
+            
+            if(valido == -1){
+                JOptionPane.showMessageDialog(null, "Por favor, inserte una numero de caja valido");
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Tiquete insertado con exito en la caja");
+        
+        
+        
+        /*String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
         String id = JOptionPane.showInputDialog("Ingrese el id del cliente: ");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del cliente: "));
         String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta:"+"\n"+"Dólares"+"\n"+"Colones");
@@ -20,7 +41,7 @@ public class Menu {
 
         this.colaTiquetes.encolar(tiquete);
         int largo = colaTiquetes.imprimirCola();
-        //System.out.println("Hay "+ largo + " tiquetes en la cola");
+        //System.out.println("Hay "+ largo + " tiquetes en la cola");*/
          
     }
     public void desplegarMenuInicial()throws Exception{

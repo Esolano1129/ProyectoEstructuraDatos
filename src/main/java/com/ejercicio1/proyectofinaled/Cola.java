@@ -49,6 +49,10 @@ public class Cola {
         return frente.getDato();
 
     }
+    
+    public Nodo getRaiz(){
+        return this.frente;
+    }
 
     public boolean estaVacia() {
         return frente == null;

@@ -5,14 +5,13 @@ public class Main {
     public static void main(String[] args) throws Exception {    
         
         Serializacion serial = new Serializacion();
-       
+        serial.serializarUsuarios("usuariosDB.json");
         
         try {
           Login log = new Login();
           log.validarUsuario();
              
-          //  Sucursal sucursal = new Sucursal();
-           // sucursal.crearCajas();
+         
            
           Menu menu = new Menu();
           menu.desplegarMenuInicial();   

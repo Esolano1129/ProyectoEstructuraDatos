@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 
 public class Sucursal {
     public String nombre;
-    public Lista cajeros = new Lista();
+    public ListaColas cajeros = new ListaColas(new NodoColas());
     public int cantidad; //lista con multiples cajas
     
     
@@ -24,11 +24,64 @@ public class Sucursal {
     public void crearCajas(){
         
         for(int i = 0; i < this.cantidad; i++){
-            cajeros.insertarNodo(new Nodo()); //insertar caja
+            
+            NodoColas cajero;
+            
+            if(i == 0){ //primera caja, va preferencial
+                cajero = new NodoColas(0); //prefencial
+            }else if(i == 1){
+                cajero = new NodoColas(1); //tramite unico
+            }else{
+                cajero = new NodoColas(i); //restantes cajeros
+            }
+            
+            
+            
+            cajeros.insertarNodo(cajero); //insertar caja
             //System.out.println("Caja " + (i+1) + " creada");
+        }        
+    }
+
+    int asignarTiquete(int cajaAtender) {
+        
+        ListaColas temp = cajeros;
+        
+        while(temp != null){
+            
+            if (temp.cabeza.codPreferencial == cajaAtender){
+                Tiquete nuevoTiquete = crearTiqueteCajero();
+                if (temp.cabeza.getTiquetes() == null){
+                    temp.cabeza.setCaja(new Cola());
+                    temp.cabeza.getTiquetes().encolar(nuevoTiquete);
+                    temp.imprimirLista();
+                    return 200; //ok cree la cola de tiquetes con el primer tiquete
+                    
+                }else{
+                    temp.cabeza.getTiquetes().encolar(nuevoTiquete);
+                    temp.imprimirLista();
+                    return 202; //ok solo inserte
+                }
+                
+            }else{
+                temp.cabeza = temp.cabeza.getSiguiente(); //la caja no es la correcta, se mueve a la siguiente y verifica
+            }
+            
         }
         
-        cajeros.imprimirLista();
+        return -1; //no encontro caja
+    
+    }
+    
+    public Tiquete crearTiqueteCajero(){
+        
+        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
+        String id = JOptionPane.showInputDialog("Ingrese el id del cliente: ");
+        int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del cliente: "));
+        String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta:"+"\n"+"Dólares"+"\n"+"Colones");
+        String tramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite:" +"\n"+"*Depositos"+"\n"+" *Retiros"+"\n"+"*Cambio de divisas"+"\n"+"*Servicios");
+        String tipoTramite = JOptionPane.showInputDialog("Ingrese el tipo de Prioridad:"+"\n"+"0: Preferencial"+"\n"+"1: Un solo tramite"+"\n"+"2: Dos o más tramites");
+
+        return new Tiquete(nombre, id, edad, monedaCuenta, tramite, tipoTramite);
         
     }
 }

@@ -33,5 +33,15 @@ public class Usuario {
     public void setContrasena(String contrasena) {
         this.contrasena = contrasena;
     }
+    
+    public void imprimirUsuario(){
+        System.out.println(this.Usuario);
+        System.out.println(this.contrasena);
+    }
+    
+    public String usuarioToString(){
+        String respuesta = "user: " +this.Usuario + " password: " + this.contrasena;
+        return respuesta;
+    }
 
 }

@@ -37,10 +37,14 @@ public class Serializacion {
         }
     }
 
-    public void serializarUsuarios(Usuario usuario, String archivo) {
+    public void serializarUsuarios(String archivo) {
         Gson gson = new GsonBuilder().create();
+        Usuario usuarioAbby = new Usuario("abby", "1234");
+        //Usuario usuarioEd = new Usuario("Edgardo", "1234");
+        
         try (FileWriter writer = new FileWriter(archivo)) {
-            gson.toJson(usuario, writer);
+            gson.toJson(usuarioAbby, writer);
+            //gson.toJson(usuarioEd, writer);
         } catch (Exception e) {
             e.printStackTrace();
         }

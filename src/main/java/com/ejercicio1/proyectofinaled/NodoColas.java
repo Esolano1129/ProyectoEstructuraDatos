@@ -1,18 +1,29 @@
 
 package com.ejercicio1.proyectofinaled;
 
-public class NodoColas {
+public class NodoColas { //cajeros
     
-    private Cola caja;
-    private NodoColas siguiente;
+    private Cola tiquetes;
+    private NodoColas siguiente; //siguiente cajero
+    int codPreferencial;
+    int limiteTramites;
+    
+    public NodoColas(int preferencia){
+        
+        this.tiquetes = new Cola();
+        this.siguiente = null;
+        this.codPreferencial = preferencia;
+        this.limiteTramites = calcularTramites();
+        
+    }
 
-    public NodoColas(Cola caja, NodoColas siguiente) {
-        this.caja = caja;
+    public NodoColas(Cola tiquetes, NodoColas siguiente) {
+        this.tiquetes = tiquetes;
         this.siguiente = siguiente;
     }
 
-    public NodoColas(Cola caja) {
-        this.caja = caja;
+    public NodoColas(Cola tiquetes) {
+        this.tiquetes = tiquetes;
     }
 
     public NodoColas(NodoColas siguiente) {
@@ -22,12 +33,12 @@ public class NodoColas {
     public NodoColas() {
     }
 
-    public Cola getCaja() {
-        return caja;
+    public Cola getTiquetes() {
+        return tiquetes;
     }
 
-    public void setCaja(Cola caja) {
-        this.caja = caja;
+    public void setCaja(Cola tiquetes) {
+        this.tiquetes = tiquetes;
     }
 
     public NodoColas getSiguiente() {
@@ -35,12 +46,27 @@ public class NodoColas {
     }
 
     public void setSiguiente(NodoColas siguiente) {
-        this.siguiente = siguiente;
+        if (this.siguiente != null){
+            setSiguiente(this.siguiente);
+        }else{
+            this.siguiente = siguiente;
+        }
+        
+    }
+    
+    public int calcularTramites(){
+        if (this.codPreferencial == 0){ //caja preferencial
+            return 1000;
+        }else if (this.codPreferencial == 1){ //caja unica
+            return 1;
+        }else{
+            return 500; //cajas restantes
+        }
     }
 
     @Override
     public String toString() {
-        return "NodoColas{" + "caja=" + caja + ", siguiente=" + siguiente + '}';
+        return "NodoColas{" + "tiquetes=" + tiquetes + ", siguiente=" + siguiente + '}';
     }
     
     
