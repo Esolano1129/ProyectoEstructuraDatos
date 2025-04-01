@@ -43,7 +43,7 @@ public class Sucursal {
     }
 
     //Método apra asignar los tiquetes a las cajas
-    int asignarTiquete(int cajaAtender) {
+   public int asignarTiquete(int cajaAtender) {
         
         ListaColas temp = cajeros;
         
@@ -55,12 +55,12 @@ public class Sucursal {
                     temp.cabeza.setCaja(new Cola());
                     temp.cabeza.getTiquetes().encolar(nuevoTiquete);
                     temp.imprimirLista();
-                    return 200; //ok cree la cola de tiquetes con el primer tiquete
+                    return 200; //crea la cola de tiquetes con el primer tiquete
                     
                 }else{
                     temp.cabeza.getTiquetes().encolar(nuevoTiquete);
                     temp.imprimirLista();
-                    return 202; //ok solo inserte
+                    return 202; //solo inserta
                 }
                 
             }else{
@@ -73,7 +73,7 @@ public class Sucursal {
     
     }
     
-    //Método para crear nuevos tiquetes.
+    //Método para crear nuevos tiquetes y asignarlos a los nodos de cola.
     public Tiquete crearTiqueteCajero(){
         
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
