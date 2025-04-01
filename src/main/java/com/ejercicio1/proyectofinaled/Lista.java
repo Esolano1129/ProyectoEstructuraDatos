@@ -12,7 +12,7 @@ public class Lista {
         this.cabeza=null;
     }
 
-    
+    // Método para insertar ordenado en la lista
     public void insertar(Tiquete t)
     {
         if(cabeza == null)
@@ -55,6 +55,7 @@ public class Lista {
         }
     }
     
+    //Metodo para insertar nodos dentro de la lista
     public void insertarNodo(Nodo dato){ //insertar cajeros
         Nodo nuevoNodo = new Nodo(dato);
         if (cabeza == null) {
@@ -71,8 +72,10 @@ public class Lista {
         }
         
        
-        
+        //Este método 
     }
+    
+    //Método para verificar si existe un elemento en la lista
     public boolean existe(String id)
     {
         boolean respuesta = false;
@@ -94,7 +97,7 @@ public class Lista {
         
         return respuesta;
     }
-    
+    //Método para modificar elementos en la lista
     public void modifica(Tiquete t)
     {
         Nodo auxiliar = cabeza;
@@ -112,7 +115,7 @@ public class Lista {
             }
         }
     }
-    
+    //Método para eliminar elementos de la lista
     public void elimina(String id)
     {
         Nodo auxiliar = cabeza;
@@ -155,7 +158,7 @@ public class Lista {
         
         return respuesta;
     }
-    
+    //Método para imprimir lista
     public int imprimirLista(){
         
         Nodo frenteTemp = this.cabeza;

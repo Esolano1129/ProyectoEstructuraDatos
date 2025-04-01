@@ -27,7 +27,7 @@ public class Serializacion {
         newCola.MoverTiquetesaLista(newLista, newLista, newLista);
 
     }
-
+    //Método para serealizar la lista
     public void serializarLista(Lista lista, String archivo) {
         Gson gson = new GsonBuilder().create();
         try (FileWriter writer = new FileWriter(archivo)) {
@@ -36,7 +36,7 @@ public class Serializacion {
             e.printStackTrace();
         }
     }
-
+   //Método para serealizar Usuarios
     public void serializarUsuarios(String archivo) {
         Gson gson = new GsonBuilder().create();
         Usuario usuarioAbby = new Usuario("abby", "1234");
@@ -49,7 +49,7 @@ public class Serializacion {
             e.printStackTrace();
         }
     }
-
+    //Método para deserealizar la Lista
     public Lista deserealizarLista(String archivo) {
         Gson gson = new GsonBuilder().create();
         try (FileReader reader = new FileReader(archivo)) {
@@ -59,7 +59,7 @@ public class Serializacion {
         }
         return null;
     }
-
+    //Método para deserealizar la Usuarios
     public Usuario deserealizarUsuarios(String archivo) {
         Gson gson = new GsonBuilder().create();
         try (FileReader reader = new FileReader(archivo)) {

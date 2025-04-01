@@ -15,6 +15,7 @@ public class Cola {
         this.fin = fin;
     }
 
+   //Método para encolar los tiquetes en la cola 
     public void encolar(Tiquete dato) {
         Nodo nuevoNodo = new Nodo(dato);
         if (fin != null) {
@@ -26,7 +27,7 @@ public class Cola {
             frente = nuevoNodo;
         }
     }
-
+    //Método para desencolar los tiquetes de la cola 
     public Tiquete desencolar() throws Exception {
         if (frente == null) {
             throw new Exception("La cola está vacía");
@@ -41,7 +42,7 @@ public class Cola {
 
         return dato;
     }
-
+    //Método para mostrar el elemento al frente de la cola 
     public Tiquete frente() throws Exception {
         if (frente == null) {
             throw new Exception("La cola está vacía");
@@ -59,7 +60,7 @@ public class Cola {
 
     }
 
-    
+    // Método para mover los tquetes de la cola a la Lista de Colas
     public void MoverTiquetesaLista(Lista CajaPreferencial, Lista CajaTramiteRapido, Lista CajaTramiteNormal) {
         Nodo auxiliar = frente;
 
@@ -84,7 +85,7 @@ public class Cola {
             auxiliar = auxiliar.getSiguiente();  
         }
     }
-    
+    //Método para imprimir los elementos de la cola
     public int imprimirCola(){
         
         Nodo frenteTemp = this.frente;

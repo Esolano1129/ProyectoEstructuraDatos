@@ -9,10 +9,10 @@ import javax.swing.JOptionPane;
 
 public class Login {
 
+    
+    //Método para validación de usuarios
     public void validarUsuario(){
-        
-        
-  
+      
         
        Gson gson = new GsonBuilder().create();
         try (FileReader reader = new FileReader("usuariosDB.json")) { 

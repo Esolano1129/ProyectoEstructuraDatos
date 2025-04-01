@@ -28,7 +28,7 @@ public class ListaColas {
         
     }
     
-    
+    //Método para imprimir lista 
     public void imprimirLista(){
         
         NodoColas frenteTemp = this.cabeza;
@@ -42,7 +42,7 @@ public class ListaColas {
             frenteTemp = frenteTemp.getSiguiente();
         }
     }
-    
+    //Método para imprimir tiquetes
     public String imprimirTiquetes(Cola tiquetes){
         Nodo temp = tiquetes.getRaiz();
         

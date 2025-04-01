@@ -20,7 +20,7 @@ public class Sucursal {
         crearCajas();
     }
     
-    
+    // Método para crear las cajas
     public void crearCajas(){
         
         for(int i = 0; i < this.cantidad; i++){
@@ -42,6 +42,7 @@ public class Sucursal {
         }        
     }
 
+    //Método apra asignar los tiquetes a las cajas
     int asignarTiquete(int cajaAtender) {
         
         ListaColas temp = cajeros;
@@ -72,6 +73,7 @@ public class Sucursal {
     
     }
     
+    //Método para crear nuevos tiquetes.
     public Tiquete crearTiqueteCajero(){
         
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");

@@ -53,7 +53,7 @@ public class NodoColas { //cajeros
         }
         
     }
-    
+    // Método para definir colas de prioridades
     public int calcularTramites(){
         if (this.codPreferencial == 0){ //caja preferencial
             return 1000;

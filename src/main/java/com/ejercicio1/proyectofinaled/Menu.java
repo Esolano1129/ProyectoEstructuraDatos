@@ -13,9 +13,9 @@ public class Menu {
         sucursal.crearCajas();
     }
     
+    //Método para cargar tiquetes a la cola
     public void MenuCargarTiket(){
-  
-        
+
         
         int valido = -1;
         while(valido == -1){
@@ -44,6 +44,8 @@ public class Menu {
         //System.out.println("Hay "+ largo + " tiquetes en la cola");*/
          
     }
+    
+    //Método para desplegar el menú inicial
     public void desplegarMenuInicial()throws Exception{
         
          int opcion;
