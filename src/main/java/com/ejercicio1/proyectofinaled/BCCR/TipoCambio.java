@@ -1,5 +1,7 @@
 
-package com.ejercicio1.proyectofinaled;
+package com.ejercicio1.proyectofinaled.BCCR;
+import com.ejercicio1.proyectofinaled.BCCR.ServicioBCCR;
+import com.ejercicio1.proyectofinaled.BCCR.IndicadorEconomico;
 import java.math.BigDecimal;
 
 public class TipoCambio {

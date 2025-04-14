@@ -1,5 +1,5 @@
 
-package com.ejercicio1.proyectofinaled;
+package com.ejercicio1.proyectofinaled.BCCR;
 import java.math.BigDecimal;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;

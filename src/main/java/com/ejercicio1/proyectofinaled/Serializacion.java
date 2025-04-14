@@ -1,5 +1,6 @@
 package com.ejercicio1.proyectofinaled;
 
+import com.ejercicio1.proyectofinaled.Grafos.Grafo;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import java.io.FileReader;
@@ -49,6 +50,14 @@ public class Serializacion {
             e.printStackTrace();
         }
     }
+    public void serializarGrafo(Grafo grafo, String archivo) {
+    Gson gson = new GsonBuilder().create();
+    try (FileWriter writer = new FileWriter(archivo)) {
+        gson.toJson(grafo, writer);
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
     //Método para deserealizar la Lista
     public Lista deserealizarLista(String archivo) {
         Gson gson = new GsonBuilder().create();

@@ -4,7 +4,7 @@ Integrantes:<br>
 
 Link Video Youtube: https://youtu.be/VmvvYFwYd3E <br>
 
-Link Video Youtube #2:  <br>
+Link Video Youtube #2: https://youtu.be/xZWcEnxGpoI?si=qOovmO4OibRoMJTD <br>
 
 - Abby Camila Chavarría Bolaños
 - Edgardo Antonio Solano Solera</b>
@@ -127,7 +127,7 @@ cuando inicia el sistema si existen registros pendientes de atender.
 
 <b>Módulo 1.4: Atencion de Tiquetes</b>
 
-<b>PENDIENTE:</b>
+<b>Completado</b>
 
 
 <b>Módulo 1.5: Atencion de Tiquetes</b>
