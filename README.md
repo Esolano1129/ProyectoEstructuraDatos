@@ -6,9 +6,9 @@ Link Video Youtube: https://youtu.be/VmvvYFwYd3E <br>
 
 Link Video Youtube #2: https://youtu.be/xZWcEnxGpoI?si=qOovmO4OibRoMJTD <br>
 
-Link Video Youtube #3: 
+Link Video Youtube #3: https://youtu.be/GYLbPvQkGSw <br>
 
-- Abby Camila Chavarría Bolaños
+- Abby Camila Chavarría Bolaños </b>
 - Edgardo Antonio Solano Solera</b>
 
 <b>Entrega #3 - Requisitos logrados</b>:
