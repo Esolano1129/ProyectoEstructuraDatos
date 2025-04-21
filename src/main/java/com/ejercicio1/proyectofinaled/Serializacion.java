@@ -14,14 +14,15 @@ public class Serializacion {
         Cola newCola = new Cola();
 
         //Datos para Json
-//        newLista.insertar(new Tiquete("Jose Rodriguez", "584728394017", 35, "Dolares", "Depositos", "A"));
-//        newLista.insertar(new Tiquete("Carlos Ramirez", "103948576210", 65, "Dolares", "Retiros", "P"));
-//        newLista.insertar(new Tiquete("Jose Salas", "928347561983", 28, "Colones", "Cambio de Divisas", "B"));
-//        newLista.insertar(new Tiquete("Raquel Saborio", "487562039184", 37, "Dolares", "Depositos", "B"));
-//        newLista.insertar(new Tiquete("Hernan Gonzales", "639820457102", 75, "Dolares", "Retiros", "P"));
-//        newLista.insertar(new Tiquete("Mario Brenes", "159384762945", 36, "Colones", "Cambio de Divisas", "A"));
+//        newLista.insertar(new Tiquete("Jose Rodriguez", "584728394017", 35, "Dolares","3:00:00","3:01:00", "Depositos", "A"));
+//        newLista.insertar(new Tiquete("Carlos Ramirez", "103948576210", 65, "Dolares","12:00:00","12:01:00", "Retiros", "P"));
+//        newLista.insertar(new Tiquete("Jose Salas", "928347561983", 28, "Colones","7:00:00","7:01:00", "Cambio de Divisas", "B"));
+//        newLista.insertar(new Tiquete("Raquel Saborio", "487562039184", 37,"Dolares","5:30:00","5:45:00", "Depositos", "B"));
+//        newLista.insertar(new Tiquete("Hernan Gonzales", "639820457102", 75, "Dolares","8:45:00","9:45:00", "Retiros", "P"));
+//        newLista.insertar(new Tiquete("Mario Brenes", "159384762945", 36, "Colones","10:25:00","12:00:00", "Cambio de Divisas", "A"));
 //
 //        serializarLista(newLista, "Config.json");
+
         newLista = deserealizarLista("Config.json");
         System.out.println(newLista.toString());
 

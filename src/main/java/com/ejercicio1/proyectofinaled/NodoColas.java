@@ -1,20 +1,21 @@
-
 package com.ejercicio1.proyectofinaled;
 
 public class NodoColas { //cajeros
-    
+
     private Cola tiquetes;
     private NodoColas siguiente; //siguiente cajero
     int codPreferencial;
     int limiteTramites;
-    
-    public NodoColas(int preferencia){
-        
+   
+
+    public NodoColas(int preferencia) {
+
         this.tiquetes = new Cola();
         this.siguiente = null;
         this.codPreferencial = preferencia;
         this.limiteTramites = calcularTramites();
         
+
     }
 
     public NodoColas(Cola tiquetes, NodoColas siguiente) {
@@ -44,22 +45,24 @@ public class NodoColas { //cajeros
     public NodoColas getSiguiente() {
         return siguiente;
     }
+    
 
     public void setSiguiente(NodoColas siguiente) {
-        if (this.siguiente != null){
+        if (this.siguiente != null) {
             setSiguiente(this.siguiente);
-        }else{
+        } else {
             this.siguiente = siguiente;
         }
-        
+
     }
+
     // Método para definir colas de prioridades
-    public int calcularTramites(){
-        if (this.codPreferencial == 0){ //caja preferencial
+    public int calcularTramites() {
+        if (this.codPreferencial == 0) { //caja preferencial
             return 1000;
-        }else if (this.codPreferencial == 1){ //caja unica
+        } else if (this.codPreferencial == 1) { //caja unica
             return 1;
-        }else{
+        } else {
             return 500; //cajas restantes
         }
     }
@@ -68,7 +71,5 @@ public class NodoColas { //cajeros
     public String toString() {
         return "NodoColas{" + "tiquetes=" + tiquetes + ", siguiente=" + siguiente + '}';
     }
-    
-    
-    
+
 }

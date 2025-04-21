@@ -12,7 +12,7 @@ public class TipoCambio {
         
         ServicioBCCR servicio = new ServicioBCCR();
         IndicadorEconomico indicador = servicio.obtenerIndicador(
-                "318", "31/03/2025", "31/03/2025",
+                "318", "22/04/2025", "22/04/2025",
                 "Edgardo Solano", "N", "edgardoasolano@gmail.com", "10ACIREM8G" //Aquí agregamos nuevas credenciales y token cuando nos subscribimos a la página del BCCR
         );
         System.out.println("\n\n\n\n/////////////////////////////////////");

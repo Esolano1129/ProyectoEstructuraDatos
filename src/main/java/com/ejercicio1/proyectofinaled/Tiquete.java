@@ -2,8 +2,6 @@
 package com.ejercicio1.proyectofinaled;
 
 
-import java.time.LocalDateTime;
-
 public class Tiquete  {
     
     public String nombre;
@@ -24,8 +22,8 @@ public class Tiquete  {
         this.id = id;
         this.edad = edad;
         this.monedaCuenta = monedaCuenta;
-        this.horaCreacion = "";
-        this.horaAtencion = null;
+        this.horaCreacion = horaCreacion;
+        this.horaAtencion = horaAtencion;
         this.tramite = tramite;
         this.tipoTramite = tipoTramite;
         

@@ -8,9 +8,12 @@ public class ListaColas {
     public ListaColas(NodoColas Cabeza) {
         this.cabeza = Cabeza;
     }
-    
-    
-    public void insertarNodo(NodoColas caja){ //insertar cajas necesita fix para muchas cajas, caso 1 caja (caja 0) funciona bien, ocupamos mas.
+
+    public ListaColas() {
+    }
+     // Método para insertar ordenado en la lista
+   
+   public void insertarNodo(NodoColas caja){ //insertar cajas necesita fix para muchas cajas, caso 1 caja (caja 0) funciona bien, ocupamos mas.
         
         NodoColas temp = cabeza;
         
@@ -25,8 +28,9 @@ public class ListaColas {
             cabeza.setSiguiente(temp);
             
         }
+
+}
         
-    }
     
     //Método para imprimir lista 
     public void imprimirLista(){
@@ -55,4 +59,44 @@ public class ListaColas {
         System.out.println("TIQUETES: "+ tiquetesString);
         return tiquetesString;
     }
+    
+   public void AtenderTiquete(String id) {
+    NodoColas cajaActual = cabeza;
+    int numeroCaja = 0;
+
+    while (cajaActual != null) {
+        Cola colaCaja = cajaActual.getTiquetes();
+
+        if (!colaCaja.estaVacia() && colaCaja.getFrente().getDato().getId().equals
+        (id)) {
+            try {
+                // Atender el tiquete actual
+                Tiquete atendido = colaCaja.desencolar();
+                atendido.setHoraAtencion(java.time.LocalTime.now().toString());
+                ManejadorArchivos.guardarTiquete(atendido, numeroCaja, "Sucursal Central");
+                System.out.println("Tiquete con ID " + id + " atendido en caja " + numeroCaja);
+
+                // Si hay otro tiquete, atenderlo automáticamente
+                if (!colaCaja.estaVacia()) {
+                    Tiquete siguiente = colaCaja.desencolar();
+                    siguiente.setHoraAtencion(java.time.LocalTime.now().toString());
+                    ManejadorArchivos.guardarTiquete(siguiente, numeroCaja, "Sucursal Central");
+                    System.out.println("Siguiente tiquete atendido automáticamente en caja " + numeroCaja);
+                }
+
+            } catch (Exception e) {
+                System.out.println("Error al atender tiquete: " + e.getMessage());
+            }
+
+            return; // salimos al encontrar el ID
+        }
+
+        cajaActual = cajaActual.getSiguiente();
+        numeroCaja++;
+    }
+
+    System.out.println("Tiquete con ID " + id + " no fue encontrado en ninguna caja.");
+}
+   
+   
 }

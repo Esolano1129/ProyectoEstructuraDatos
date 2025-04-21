@@ -98,4 +98,21 @@ public class Cola {
         }
         return i;
     }
+
+    public Nodo getFrente() {
+        return frente;
+    }
+
+    public void setFrente(Nodo frente) {
+        this.frente = frente;
+    }
+
+    public Nodo getFin() {
+        return fin;
+    }
+
+    public void setFin(Nodo fin) {
+        this.fin = fin;
+    }
+    
 }

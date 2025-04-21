@@ -6,10 +6,12 @@ Link Video Youtube: https://youtu.be/VmvvYFwYd3E <br>
 
 Link Video Youtube #2: https://youtu.be/xZWcEnxGpoI?si=qOovmO4OibRoMJTD <br>
 
+Link Video Youtube #3: 
+
 - Abby Camila Chavarría Bolaños
 - Edgardo Antonio Solano Solera</b>
 
-<b>Entrega #2 - Requisitos logrados</b>:
+<b>Entrega #3 - Requisitos logrados</b>:
 
 <b>Módulo 1.0: Configuración</b>
   
@@ -93,7 +95,7 @@ un archivo llamado atendidos.json (.txt)
 
 6. Los tipos de tiquetes deben ser al menos.
 
-<b>PENDIENTE:</b>
+<b>AVANCE:Completado</b>
 
 
 

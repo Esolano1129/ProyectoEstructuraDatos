@@ -1,6 +1,7 @@
 
 package com.ejercicio1.proyectofinaled;
 
+import java.time.LocalTime;
 import javax.swing.JOptionPane;
 
 public class Sucursal {
@@ -79,11 +80,13 @@ public class Sucursal {
         String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
         String id = JOptionPane.showInputDialog("Ingrese el id del cliente: ");
         int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del cliente: "));
+        String horaCreacion = LocalTime.now().toString();
+        String horaAtencion = LocalTime.now().toString();
         String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta:"+"\n"+"Dólares"+"\n"+"Colones");
         String tramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite:" +"\n"+"*Depositos"+"\n"+" *Retiros"+"\n"+"*Cambio de divisas"+"\n"+"*Servicios");
         String tipoTramite = JOptionPane.showInputDialog("Ingrese el tipo de Prioridad:"+"\n"+"0: Preferencial"+"\n"+"1: Un solo tramite"+"\n"+"2: Dos o más tramites");
 
-        return new Tiquete(nombre, id, edad, monedaCuenta, tramite, tipoTramite);
+        return new Tiquete(nombre, id, edad, monedaCuenta,horaCreacion,horaAtencion, tramite, tipoTramite);
         
     }
 }
