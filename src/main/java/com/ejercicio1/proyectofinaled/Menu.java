@@ -17,18 +17,7 @@ public class Menu {
     //Método para cargar tiquetes a la cola
     public void MenuCargarTiket() {
 
-//        String nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente: ");
-//        String id = JOptionPane.showInputDialog("Ingrese el id del cliente: ");
-//        int edad = Integer.parseInt(JOptionPane.showInputDialog("Ingrese la edad del cliente: "));
-//        String monedaCuenta = JOptionPane.showInputDialog("Ingrese la moneda de la cuenta:"+"\n"+"Dólares"+"\n"+"Colones");
-//        String tramite = JOptionPane.showInputDialog("Ingrese el tipo de tramite:" +"\n"+"*Depositos"+"\n"+" *Retiros"+"\n"+"*Cambio de divisas"+"\n"+"*Servicios");
-//        String tipoTramite = JOptionPane.showInputDialog("Ingrese el tipo de Prioridad:"+"\n"+"P: Preferencial"+"\n"+"A: Un solo tramite"+"\n"+"B: Dos o más tramites");
-//
-//        Tiquete tiquete = new Tiquete(nombre, id, edad, monedaCuenta, tramite, tipoTramite);
-//
-//        this.colaTiquetes.encolar(tiquete);
-//        int largo = colaTiquetes.imprimirCola();
-//        System.out.println("Hay "+ largo + " tiquetes en la cola");
+
         int valido = -1;
         while (valido == -1) {
             int cajaAtender = Integer.parseInt(JOptionPane.showInputDialog("Digite el numero de caja que va a atender el tiquete"));

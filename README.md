@@ -59,7 +59,7 @@ discapacidades, embarazo, empresariales, adultos mayores. De igual forma, entre 
 <b>AVANCE:Completado</b> 
 
 4. Una vez el tiquete es creado con la información del cliente, este imprime la caja en la que debe ser atendido, así mismo, la cantidad de personas que están por delante de él. En caso de no tener a nadie adelante y la caja no está atendiendo a ningún cliente (ocupada) el programa debe indicarle que ya es su turno de atención.
-<b>PENDIENTE</b>
+<b>Avance: Intentamos realizar la implementación de este punto por medio del método desencolar en las colas.</b>
 
 5. Lo anterior debe verse reflejado (serializado) en el archivo tiquetes.json (.txt). Y cargarse cuando inicia el sistema si existen registros pendientes de atender.
    
@@ -73,21 +73,21 @@ discapacidades, embarazo, empresariales, adultos mayores. De igual forma, entre 
 1. La primera es al momento de crear un tiquete si se asigna a una cola vacía, inmediatamente este pasará a ser atendido por el cajero siempre y cuando este esté
 desocupado (no se encuentra atendiendo un tiquete).
 
-<b>PENDIENTE:</b>
+<b>AVANCE: Intentamos implementarlo dinámicamente pero no nos funcionó por lo que tuvimos que realizarlo con datos quemados</b>
 
 
 2. La segunda función es cuando las filas se encuentran llenas, en este escenario, el programa debe contar con una funcionalidad que sea “Tiquete atendido” en el cual se debe identificar el número de caja para proceder a asignar otro cliente de la cola a esta.
 
-<b>PENDIENTE:</b>
+<b>AVANCE:Intentamos implementarlo dinámicamente pero no nos funcionó por lo que tuvimos que realizarlo con datos quemados</b>
 
 3. Cada vez que un tiquete pasa a ser atendido debe cambiar la hora de atención por la del sistema y además debe mandarlo a guardar en la base de datos, en este caso
 un archivo llamado atendidos.json (.txt)
 
-<b>PENDIENTE:</b>
+<b>AVANCE:Intentamos implementarlo dinámicamente pero no nos funcionó por lo que tuvimos que realizarlo con datos quemados</b>
 
 4. Se debe guardar en base de datos en cual caja y de cual sucursal fue atendido.
 
-<b>PENDIENTE:</b>
+<b>AVANCE:Intentamos implementarlo dinámicamente pero no nos funcionó por lo que tuvimos que realizarlo con datos quemados</b>
 
 5. El sistema debe poder mostrar por pantalla esta información con una opción de menú.
 
@@ -123,7 +123,7 @@ tiquetes de dos o más tramites no se atienden en estas cajas especiales.
 Lo anterior debe verse reflejado (serializado) en el archivo colas.json (.txt). Y cargarse
 cuando inicia el sistema si existen registros pendientes de atender.
 
-<b>PENDIENTE:</b>
+<b>Avance: Intentamos realizar la serialización por medio de la clase serialización</b>
 
 
 
